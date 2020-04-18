@@ -17,14 +17,14 @@
                 <p v-else>Out of Stock</p>
                 <p v-show="onSale">On SALE</p>
 
-<!--
+
                 <ul>
-                    <li v-for-key="(detail,index) in details"> {{ detail }}</li>
+                    <li v-for="detail in details" :key="detail"> {{ detail }}</li>
                 </ul>
-                <div v-for-key="(variant,index) in variants">
+                <div v-for="variant in variants" :key="variant.item">
                     <p v-on:mouseover="updateProduct(variant.vImage)">{{ variant.iColour }}</p>
                 </div>
--->                
+
                 <P>
                     <a :href="imsrc" target="_blank">Image Source</a>
                 </P>
@@ -55,7 +55,7 @@ export default {
     return {
       product: 'Socks',
       description: "Nice new blue socks",
-      image: '../droplet2.jpg',
+      image: 'droplet2.jpg',
       imtitle: "Nice Droplet",
       imsrc: "https://www.w3schools.com",
       inventory: 100,
@@ -63,7 +63,7 @@ export default {
       details:["nice","tall","glorious"],
       variants:[{item:"list1", iColour:"Droplet",vImage:"droplet2.jpg"},{item:"list2", iColour:"Beach",vImage:"Jim Beach.jpg"}],
       cart:0
-    }
+    };
   },
     methods:{
 
@@ -80,9 +80,10 @@ export default {
 }
 </script>
 
-<style>
-* {
-  body {
+<style> 
+
+
+body {
     font-family: tahoma;
     color: #282828;
     margin: 0px;
@@ -171,5 +172,6 @@ export default {
     color: #16C0B0;
     text-decoration: underline;
   }
-}
+  
+
 </style>
