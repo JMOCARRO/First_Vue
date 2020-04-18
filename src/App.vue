@@ -55,7 +55,7 @@ export default {
     return {
       product: 'Socks',
       description: "Nice new blue socks",
-      image: 'droplet2.jpg',
+      image: '../droplet2.jpg',
       imtitle: "Nice Droplet",
       imsrc: "https://www.w3schools.com",
       inventory: 100,
