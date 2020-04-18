@@ -17,13 +17,14 @@
                 <p v-else>Out of Stock</p>
                 <p v-show="onSale">On SALE</p>
 
+<!--
                 <ul>
                     <li v-for-key="(detail,index) in details"> {{ detail }}</li>
                 </ul>
                 <div v-for-key="(variant,index) in variants">
                     <p v-on:mouseover="updateProduct(variant.vImage)">{{ variant.iColour }}</p>
                 </div>
-                
+-->                
                 <P>
                     <a :href="imsrc" target="_blank">Image Source</a>
                 </P>
