@@ -29,11 +29,23 @@
                     <a :href="imsrc" target="_blank">Image Source</a>
                 </P>
 
-                <button v-on:click="addToCart"> Add to Cart</button>
-                <button v-on:click="decrementCart"> Remove Cart</button>
-                <button v-on:click="cart+=1"> Add to Cart</button>
-                <div class="cart">
-                    <p>Cart({{cart}})</p>
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <b-button variant="primary" v-on:click="addToCart"> Add to Cart</b-button>
+                    </div>
+                    <div class="col">
+                      <b-button variant="danger" v-on:click="decrementCart"> Remove Cart</b-button>
+                    </div>
+                    <div class="col">
+                      <b-button variant="danger" v-on:click="cart+=1"> Add to Cart</b-button>
+                    </div>
+                    <div class="col">
+                      <div class="cart">
+                          <h4><b-badge variant="info">Cart({{cart}})</b-badge></h4>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
             </div>
@@ -124,23 +136,27 @@ body {
     margin-top: 5px;
   }
   
+  /*
   .cart {
     margin-right: 25px;
     float: right;
     border: 1px solid #d8d8d8;
     padding: 5px 20px;
   }
-  
+  */
+  /*
   button {
     margin-top: 30px;
     border: none;
     background-color: #1E95EA;
     color: white;
     height: 40px;
-    width: 100px;
-    font-size: 14px;
+    width: 120px;
+    font-size: 12px;
+    margin: 10px;
   } 
-  
+  */
+
   .disabledButton {
     background-color: #d8d8d8;
   }
