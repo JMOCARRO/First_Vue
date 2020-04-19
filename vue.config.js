@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: 'vue_first_test',
+  publicPath: 'First_Vue',
 }
